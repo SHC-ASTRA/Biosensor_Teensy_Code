@@ -1,0 +1,19 @@
+#include <Arduino.h>
+#include <SPI.h>
+#include <ADC.h>
+#include <ADC_util.h>
+#include <Wire.h>
+
+bool adcSetup();
+uint16_t adcReadTwoBytes();
+bool epc901Setup();
+void epc901FlushBuffer();
+void epc901Wake();
+void epc901Sleep();
+void epc901Capture(long);
+void adcReadFrame();
+void sendReadPulse();
+void sendReadClock();
+void takePicture(long);
+void printFramebufferASCII();
+void printFramebufferBinary();
